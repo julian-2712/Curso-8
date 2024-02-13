@@ -1,0 +1,10 @@
+Código reutilizable
+
+La idea del código reusable nace de la necesidad de 'Don´t repeat yourself' o mejor conocido como DRY. 
+Este nos ayudará a prevenir bugs y también, encontrar los más fácil.
+
+⚠ Copiar código será tu peor enemigo para tener un código fácil de mantener
+
+Escribir código reutilizable nos va a ayudar a que en lugar de copiar y pegar una misma línea de código pero 
+con diferentes parámetros lo hagamos a través de una función que retorne los valores que necesitamos y luego 
+la podremos llamar en cualquier lugar del código que necesitemos pasándole los parámetros que deseamos.

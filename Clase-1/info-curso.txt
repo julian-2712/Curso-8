@@ -1,0 +1,9 @@
+**Objetivo: **:Crear aplicaciones mas robustas, escalables y mantenibles en el tiempo.
+
+Temas:
+
+Identificación de problemas comunes en la escritura de codigo y como evitarlas
+
+Principio SOLID
+
+TDD -> Test Driven Development

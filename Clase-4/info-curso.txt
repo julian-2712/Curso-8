@@ -1,0 +1,10 @@
+Código prolijo
+
+Estándar de codificación
+Es una serie de reglas que nos dice como escribir nuestro código. Esto nos ayuda generar un código claro y consistente. 
+También, nos evita que pierdas tiempo en decisiones triviales.
+
+Cómo mejorar la legibilidad de nuestro código
+· Define un estándar
+· Respétalo
+· Apóyate en algún linter (es una herramienta)

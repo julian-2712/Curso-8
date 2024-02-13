@@ -1,0 +1,37 @@
+Reto
+Se puede usar una función para extraer los valores de cada row. En esta función podríamos usar destructuring al momento de asignar 
+el resultado de la misma en nuevas variables
+str_replace se usa en diferentes lugares, con parámetros muy similares. Esto se podría reemplazar con una función en la cual solamente 
+enviamos el valor que queremos actualizar.
+La condición que evalua $hora y $trabajo se puede extraer,
+Dentro de esta condición, a las variables horae y horas se les puede dar un nombre más descriptivo (horaentrada, horasalida)
+
+Reto 4 
+La clase Order es un ejemplo de código no modularizado, ya que contiene varios métodos que podrían extraerse.
+Los métodos load, save, update y delete podrían ser usados en diferentes lugares de la aplicación.
+El hecho de que estos métodos estén en esta clase me da a entender que es posible que otras clases también cuenten con éstos métodos, 
+lo que significaría que hay código duplicado. Si hay un bug en estos métodos, es muy probable que ese bug se encuentre esparcido en las 
+demás clases que tienen estos métodos.
+
+Reto 4b 
+El método process de la clase ProjectManagement cuenta con una condición por cada tipo de parametro que recibe, y dependiendo de 
+éste ejecuta cierto método exclusivo de cada clase. Por lo que si en un futuro se crea una nueva clase, el método process tendrá que ser modificado.
+Las clases Programmer y Tester podrían hacer uso de una interfaz que cuente con un método work por ejemplo, y cada clase implementaría ese método a sus necesidades.
+Al realizar este cambio, el método process quedaría más limpio ya que podría llamar un método que todas la clases tienen en común, en lugar 
+de evaluar la clase del parámetro que recibe y con base en eso ejecutar el método correspondiente.
+
+Reto 4c 
+La clase Animal cuenta con una función llamada fly sin embargo, no todos los animales pueden volar. La clase Dog, al heredar de la 
+clase Animal, abre la posibilidad de que se pueda a llamar este método desde clase Dog, por lo que el código sobreescribe el método heredado 
+para evitar que éste se pueda ejecutar, lo cual no me parece lo más adecuado. Esto se puede resolver removiendo el método fly de la clase Animal, 
+y creando una nueva clase Ave que herede de Animal y que cuente con su propio método fly. De esta manera, las clases que hereden de **Animal **
+en un futuro no tendrán el método **fly **disponible, y las clases que hereden de Ave sí tendrán el método fly disponible,
+
+Reto 4d 
+La clase Consultant no implementa el método collate. Si una clase no implementa todos los métodos de la interfaz de la cual extiende, entonces 
+no debería de extender de esa interfaz.
+
+Reto 4e 
+La clase ContadorDeManzanas podría ser un poco más generica y de este modo sería reutilizable. Actualmente, si queremos obtener el numero 
+de manzanas de un manzano, tenemos que crear una instancia de ContadorDeManzanas. Si tuvieramos 100 instancias de Manzano, y quisieramos obtener 
+el numero de manzanas de cada uno de ellos, tendríamos que crear 100 instancias de ContadorDeManzanas, lo cual no me parece eficiente.

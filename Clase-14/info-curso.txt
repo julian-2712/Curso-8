@@ -1,0 +1,14 @@
+Interface Segregation Principle
+
+En palabra simples el principio de segregación de interfaz nos indica que no debemos de dar más de la información necesaria a los módulos que van a funcionar.
+
+------------------------------------------------
+
+De una forma más simplificada:
+
+"Si una clase implementa una interfaz, y la interfaz le obliga definir un método que no necesita, entonces probablemente tu clase 
+no está implementando la interfaz correcta"
+
+Y una solución a ello puede ser:
+
+Divide esa interfaz en interfaces más específicas, y en tus clases solo implementa las interfaces que necesites.

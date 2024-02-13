@@ -1,0 +1,11 @@
+Código Modular
+
+El código modular son pedazos de códigos divididos que pueden ser utilizados en cualquier lugar para evitar tener un solo archivo con un bloque de código gigante.
+
+⚠ A mayor cantidad de código menos visible los bugs.
+
+El tipo de código que con frecuencia vamos a modularizar son:
+
+- Los bloques que están dentro de un Ciclo for o while
+- Los bloques dentro de un condicional
+- Código que hace calculos complejos

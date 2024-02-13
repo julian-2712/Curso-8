@@ -1,0 +1,60 @@
+El Liskov Substitution Principle establece que cada clase que hereda de otra puede usarse como su padre sin necesidad 
+de conocer las diferencias entre ellas. Para que pueda darse este principio debe cumplir con dos puntos:
+
+- El cliente debe usar métodos de la clase padre únicamente.
+- La clase hija no debe alterar el comportamiento de los métodos de la clase padre.
+
+class Padre
+{
+}
+
+class Hijo extends Padre
+{
+}
+
+function f(Padre $p)
+{
+}
+
+$h = new Hijo();
+$a = f($h);
+
+Explicación:
+
+Si una entidad (en este caso una función) está esperando recibir una instancia de la clase Padre, debe ser completamente posible 
+pasarle una instancia de cualquier otra clase que extienda o herede de Padre, pero que al pasarle una de estas instancias no rompa 
+el comportamiento del flujo del programa, y las cosas que pueden romper ese comportamiento son:
+
+1.- Que la entidad (en este caso una función que espera específicamente una instancia de la clase Padre) haga uso de un método de la 
+clase Hijo, que la clase padre no tiene, por ejemplo, si yo le paso una instancia de la clase Hijo, y la función manda a llamar a un 
+método que solo tiene la clase Hijo, todo bien, funciona, pero si yo le paso la clase Padre, dará un error pues la clase Padre no tiene 
+ese método, por tanto, se rompe el principio porque ya no puedo pasarle cualquier instancia que herede de Padre. Y esto puede suceder 
+gracias a que estamos programando normalmente y decimos: "Ah le voy a pasar una instancia de Hijo que tiene este método, y ya en la función 
+comparo si es una instancia de Hijo o de Padre para saber si uso el método o no", esto igual viola el principio, pues la entidad NO debe 
+hacer distinciones entre la diferencia de ambas clases, simplemente debe funcionar sin hacer comparaciones.
+
+Lo otro que también puede ocasionar que falle es que la clase Hijo sobreescriba un método de padre, pues está cambiando su comportamiento, 
+lo que podría provocar que cuando la función ejecute ese método, el método le devuelva una respuesta diferente a lo que devuelve el método 
+padre, y esto puede causar un error también.
+
+Un ejemplo práctico es que en el método de Padre se devuelva un string y en el método que Hijo sobreescribe se devuelva un integer, esto 
+causará conflictos en la función que manda a llamar el método, porque esta función está esperando específicamente un string, porque la función 
+espera una instancia de Padre, y el método de padre devuelve un string.
+
+Otra fuente:
+
+https://www.youtube.com/watch?v=lOg2IuQIp-s
+
+---------------------------------------------
+
+Liskov Substitution Principle
+Este nos dice que cada clase que hereda de otra puede usarse como su padre sin necesidad de conocer las diferencias entre ellas.
+
+Para que esto suceda se tiene que dar varias condiciones:
+
+El cliente debe usar métodos de la clase padre únicamente.
+La clase hija no debe alterar el comportamiento de los métodos de la clase padre.
+
+Resumen:
+En palabra simples las clases que heredan de otras clases deben seguir comportándose como su padre, o sea, debemos derivar de una clase 
+solamente para AÑADIR comportamientos, NO para MODIFICAR el que ya existía.

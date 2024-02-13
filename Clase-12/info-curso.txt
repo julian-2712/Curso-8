@@ -1,0 +1,10 @@
+Open/Closed Principle establece que una entidad de software debe quedarse abierta para su extensión, pero cerrada para su modificación.
+
+Una manera más fácil de ver este principio es:
+
+"La clase debe quedar abierta para añadir nuevos features, pero que esos nuevos features no impliquen modificar el código que ya estaba 
+(A eso se refiere cerrada para su modificación)"
+
+Es decir, todo el código nuevo que metamos debe adaptarse automáticamente con el código viejo que ya teníamos y no debe implicar modificar este código viejo.
+
+Abierto a nuevos features, cerrado a modificación de features antiguos.

@@ -1,0 +1,14 @@
+Código organizado
+
+Cuando hablamos de código organizado nos referimos a cómo está el código distribuido en nuestro sistema de archivos. 
+Esto significa que necesitas organizar el código y que según cómo se llame el archivo, este adentro debe contener únicamente lo que su nombre indica.
+
+Quiere decir, que agruparemos archivos que tengan un contenido similar en directorios.
+
+⭐ Esto se trata de convención, no una imposición. Esto quiere decir, que es lo generalmente extendido en el ámbito.
+
+PHP ej:
+/public -> contendrá los archivos que sean accesibles desde fuera del servidor.
+/src -> los archivos de nuestro proyecto, los creados por nosotros mismos.
+/tests -> archivos de pruebas unitarias, de pruebas que se realicen.
+/vendor -> archivos de librerías de terceros que estemos usando en nuestro proyecto.

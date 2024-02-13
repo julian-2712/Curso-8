@@ -1,0 +1,19 @@
+Identificadores mnemotécnicos, específicos y precisos
+
+Los identificadores son variables, funciones, clases, módulos, componentes, etc. Elementos a los que nosotros debamos crearles un nombre propio.
+
+Ejemplo sin un identificador mnemotécnico una función se vería así:
+
+function f( int $b, int $a ) : float {
+        return ( $b * $a ) / 2;
+}
+Al leer este código no sabemos para qué funciona y hasta podríamos borrarlo por equivocación.
+
+Ahora utilizando un identificador mnemotécnico se vería así:
+
+function areaRectangulo( int $base, int $altura ) : float {
+        return ( $base * $altura ) / 2;
+}
+Ahora gracias a que el código es más legible sabemos para qué funciona esta función.
+
+Atención a los identificadores que estableces.

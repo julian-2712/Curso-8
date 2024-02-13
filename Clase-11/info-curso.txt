@@ -1,0 +1,22 @@
+Principios SOLID: Single Responsibility Principle
+Solid es un acrónimo en inglés que hace referencia 5 principios básicos de OOP, su objetivo es apuntar a desarrollar aplicaciones fácilmente mantenible a lo largo del tiempo.
+
+Los 5 principios son:
+
+Single Responsibility Principle
+Open/closed Principle
+Liskov Substitution Principle
+Interface Segregation Principle
+Dependency Inversion Principle
+
+S: se trata de una clase que debe tener sólo una razón para cambiar.
+O: Principio Abierto/Cerrado. Las entidades de software (clases, módulos, funciones, etc.) deben estar abiertas para extensión pero cerradas para modificación.
+L: Principio de sustitución de Liskov. Los objetos de una clase base deben poder ser reemplazados por objetos de clases derivadas sin afectar la integridad del programa.
+I: Principio de segregación de la interfaz. Las interfaces de software deben ser específicas para cada cliente y no deben incluir métodos que el cliente no necesite.
+D: Principio de inversión de dependencia. Los módulos de software de alto nivel no deben depender de módulos de bajo nivel. En su lugar, ambos deben depender de abstracciones.
+
+
+---- Single Responsibility Principle ----
+El principio de responsabilidad única nos dice que una clase debería tener un único objetivo. También, se le puede conocer como la alta cohesión.
+
+✨ Algo que nos ayuda este principio es a tener código más reutilizable.
